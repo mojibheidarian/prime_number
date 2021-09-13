@@ -1,0 +1,29 @@
+input1 = int(input('number 1 ? '))
+input2 = int(input('number 2 ? '))
+def prime(inp):
+    if inp > 0:
+        if inp > 2:
+            for i in range(2,inp):
+                if inp % i == 0:
+                    r = 'No'
+
+                    break
+            else:
+                r = 'True'
+        elif inp == 2:
+            r = 'True'
+        else:
+            r = 'No'
+    else:
+        r = 'No'
+    return print(r)
+def show_prime_between_two_number():
+    for i in range(input1,input2+1):
+
+        print(i)
+        prime(i)
+        print('--------')
+def show_prime_is():
+    print('number one is prime: '), prime(input1)
+#show_prime_is()
+show_prime_between_two_number()
